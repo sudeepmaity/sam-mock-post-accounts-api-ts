@@ -1,0 +1,17 @@
+{
+  "name": "sam-nodejs-typescript",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "sam local start-api",
+    "test": "echo \"Write tests!\""
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

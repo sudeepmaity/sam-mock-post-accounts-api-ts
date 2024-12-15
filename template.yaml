@@ -1,0 +1,16 @@
+Resources:
+  SubmitFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: dist/app.handler # Ensure it points to the compiled file in the "dist" folder
+      Runtime: nodejs18.x
+      MemorySize: 128
+      Timeout: 10
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        SubmitEndpoint:
+          Type: Api
+          Properties:
+            Path: /submit
+            Method: POST
